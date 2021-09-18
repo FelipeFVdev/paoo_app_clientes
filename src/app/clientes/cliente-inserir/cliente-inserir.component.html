@@ -1,0 +1,73 @@
+<mat-card>
+  <form (submit)="onAdicionarCliente(clienteForm)" #clienteForm="ngForm">
+
+  <mat-form-field appearance="fill">
+    <mat-label>Digite seu nome</mat-label>
+
+    <input
+      type="text"
+      matInput
+      name="nome"
+      ngModel
+      required
+       />
+
+    <button
+    *ngIf="true"
+    matSuffix
+    mat-icon-button
+    >
+    <mat-icon>close</mat-icon>
+    </button>
+    <mat-error>Pelo menos 3 caracteres</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Digite o fone</mat-label>
+    <input
+      type="text"
+      matInput
+      name="fone"
+      ngModel
+      required
+      minlength="3"
+      />
+    <button
+      *ngIf="true"
+      matSuffix
+      mat-icon-button
+      >
+    <mat-icon>close</mat-icon>
+    </button>
+    <mat-error >Digite o telefone</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Digite seu email</mat-label>
+      <input
+      type="text"
+      matInput
+      name="email"
+      ngModel
+      required
+      email
+      />
+      <button
+      *ngIf="true"
+      matSuffix
+      mat-icon-button
+      >
+        <mat-icon>close</mat-icon>
+      </button>
+      <mat-error>Email inválido</mat-error>
+  </mat-form-field>
+
+  <button mat-stroked-button color="primary">
+    Inserir Cliente
+  </button>
+
+  </form>
+
+</mat-card>
+
+
